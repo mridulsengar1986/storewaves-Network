@@ -43,7 +43,7 @@ export default function Hero() {
             className="w-40 px-5 py-2 bg-teal-500 text-white font-medium rounded-lg shadow-lg
                          transform hover:-translate-y-1 hover:scale-105 hover:bg-teal-600
                          transition duration-300 focus:outline-none focus:ring-2 focus:ring-teal-300">
-                          Brands
+                          Brand
                           
           </button>
            <button
