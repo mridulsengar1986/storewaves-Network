@@ -19,58 +19,58 @@ export default function Hero() {
                                    text-white font-medium rounded-md
                              hover:from-gray-300 hover:to-indigo-700
                                                 transition duration-300">
-   <span className="
+              <span className="
       absolute top-0 left-0 h-full w-16
       bg-white opacity-30
       transform -skew-x-20 -translate-x-full
      /* trigger our keyframe on hover */
       group-hover:animate-shine
     "
-  />
-              Get Started
+              />
+              Get Started with brands
             </button>
           </div>
           <div className="hidden lg:block">
             <div className="hidden lg:flex flex-col space-y-4 ml-80">
-          <button className="w-max px-5 py-2
+              <button className="w-max px-5 py-2
     bg-teal-500 text-white font-medium rounded-lg shadow-lg
     transform transition duration-300
     hover:-translate-y-1 hover:scale-105 hover:bg-teal-600
     focus:outline-none focus:ring-2 focus:ring-teal-300">
-                         Tools
-          </button>
-          <button 
-            className="w-40 px-5 py-2 bg-teal-500 text-white font-medium rounded-lg shadow-lg
+                Tools
+              </button>
+              <button
+                className="w-40 px-5 py-2 bg-teal-500 text-white font-medium rounded-lg shadow-lg
                          transform hover:-translate-y-1 hover:scale-105 hover:bg-teal-600
                          transition duration-300 focus:outline-none focus:ring-2 focus:ring-teal-300">
-                          Brand
-                          
-          </button>
-           <button
-            className="w-60
+                Brand
+
+              </button>
+              <button
+                className="w-60
               bg-teal-500 text-white font-medium 
               px-6 py-3 rounded-lg shadow-lg
               transform hover:-translate-y-1 hover:scale-105
               hover:bg-teal-600 transition duration-300
               focus:outline-none focus:ring-2 focus:ring-teal-300
             "
-          >
-          Agencies
-          </button>
-          <button
-             
-            className="
+              >
+                Agencies
+              </button>
+              <button
+
+                className="
               bg-teal-500 text-white font-medium 
               px-10 py-3 rounded-lg shadow-lg
               transform hover:-translate-y-1 hover:scale-105
               hover:bg-teal-600 transition duration-300
               focus:outline-none focus:ring-2 focus:ring-teal-300
             "
-          >
-          Reviews
-          </button>
-        </div>
-          
+              >
+                Reviews
+              </button>
+            </div>
+
           </div>
         </div>
       </div>
