@@ -1,9 +1,9 @@
 // src/components/Footer.jsx
 import React from 'react';
 import {
-  Bars3Icon,           // for menu icon
+  Bars3Icon, // for menu icon
   PhoneIcon,
-  EnvelopeIcon,        // for  MailIcon we use EnvelopIcon
+  EnvelopeIcon, // for  MailIcon we use EnvelopIcon
   MapPinIcon,
   ArrowSmallRightIcon,
   ChevronUpIcon,
@@ -13,12 +13,12 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 export default function Footer() {
   return (
     <footer className="bg-teal-800 text-gray-300">
-      <div className="max-w-6xl mx-auto px-6 py-10">
+      <div className="mx-auto max-w-6xl px-6 py-10">
         {/* Contact info */}
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0">
+        <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
           <div className="flex items-center space-x-2">
             <PhoneIcon className="h-5 w-5 text-orange-500" />
-            <span>+65 6653 8060</span>
+            <span>+6566538060</span>
           </div>
           <div className="flex items-center space-x-2">
             <EnvelopeIcon className="h-5 w-5 text-orange-500" />
@@ -26,19 +26,19 @@ export default function Footer() {
           </div>
           <div className="flex items-center space-x-2">
             <MapPinIcon className="h-5 w-5 text-orange-500" />
-            <span>One Neil Road #02‑02, Singapore 088804</span>
+            <span>OneNeilRoad#02‑02, Singapore088804</span>
           </div>
         </div>
 
-        <hr className="border-gray-700 my-8" />
+        <hr className="my-8 border-gray-700" />
 
         {/* Links & subscribe */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
           {/* About */}
           <div>
-            <h4 className="text-white font-semibold mb-4">About</h4>
+            <h4 className="mb-4 font-semibold text-white">About</h4>
             <ul className="space-y-2">
-              {['Our Story', 'Awards', 'Our Team', 'Career'].map(text => (
+              {['Our Story', 'Awards', 'Our Team', 'Career'].map((text) => (
                 <li key={text}>
                   <a href="#" className="hover:text-white">
                     {text}
@@ -50,9 +50,9 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Company</h4>
+            <h4 className="mb-4 font-semibold text-white">Company</h4>
             <ul className="space-y-2">
-              {['Our Services', 'Clients', 'Contact', 'Press'].map(text => (
+              {['Our Services', 'Clients', 'Contact', 'Press'].map((text) => (
                 <li key={text}>
                   <a href="#" className="hover:text-white">
                     {text}
@@ -64,9 +64,9 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Resources</h4>
+            <h4 className="mb-4 font-semibold text-white">Resources</h4>
             <ul className="space-y-2">
-              {['Blog', 'Newsletter', 'Privacy Policy'].map(text => (
+              {['Blog', 'Newsletter', 'Privacy Policy'].map((text) => (
                 <li key={text}>
                   <a href="#" className="hover:text-white">
                     {text}
@@ -78,16 +78,16 @@ export default function Footer() {
 
           {/* Subscribe */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Subscribe</h4>
+            <h4 className="mb-4 font-semibold text-white">Subscribe</h4>
             <form className="flex">
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full px-3 py-2 rounded-l bg-gray-800 text-gray-200 focus:outline-none"
+                className="w-full rounded-l bg-gray-800 px-3 py-2 text-gray-200 focus:outline-none"
               />
               <button
                 type="submit"
-                className="px-4 py-2 bg-orange-500 rounded-r hover:bg-orange-600 focus:outline-none"
+                className="rounded-r bg-orange-500 px-4 py-2 hover:bg-orange-600 focus:outline-none"
               >
                 <ArrowSmallRightIcon className="h-5 w-5 text-white" />
               </button>
@@ -96,7 +96,7 @@ export default function Footer() {
         </div>
 
         {/* Social & bottom bar */}
-        <div className="mt-8 flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0">
+        <div className="mt-8 flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-y-0">
           {/* Social icons */}
           <div className="flex space-x-4">
             <a href="#" className="hover:text-white">
@@ -113,13 +113,11 @@ export default function Footer() {
           {/* Copyright + back‑to‑top */}
           <div className="flex items-center space-x-4">
             <p className="text-sm">
-              © 2009 – 2016 Happy Marketer Private Ltd. All Rights Reserved.
+              ©2009–2016Happy Marketer PrivateLtd. All Rights Reserved.
             </p>
             <button
-              onClick={() =>
-                window.scrollTo({ top: 0, behavior: 'smooth' })
-              }
-              className="p-2 bg-orange-500 rounded-full hover:bg-orange-600 focus:outline-none"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="rounded-full bg-orange-500 p-2 hover:bg-orange-600 focus:outline-none"
             >
               <ChevronUpIcon className="h-5 w-5 text-white" />
             </button>
