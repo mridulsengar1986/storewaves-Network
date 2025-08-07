@@ -83,7 +83,7 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full rounded-l bg-gray-800 px-3 py-2 text-gray-200 focus:outline-none"
+                className="bg-white-800 w-full rounded-l px-3 py-2 text-gray-800 focus:outline-none"
               />
               <button
                 type="submit"
