@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import TestimonialCard from './TestimonialCard';
 
 const testimonials = [
@@ -40,20 +40,25 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const cardsPerPage = 3; // how many cards show at once
+  const [index, setIndex] = useState(0);
+  const [perPage, setPerPage] = useState(1); // 1 on mobile by default
 
-  const prevSlide = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
+  // Decide how many cards to show based on screen width
+  useEffect(() => {
+    const pickPerPage = () => {
+      const w = window.innerWidth;
+      // Tailwind breakpoints: sm=640, lg=1024
+      setPerPage(w >= 1024 ? 3 : w >= 640 ? 2 : 1);
+    };
+    pickPerPage();
+    window.addEventListener('resize', pickPerPage);
+    return () => window.removeEventListener('resize', pickPerPage);
+  }, []);
 
-  const nextSlide = () => {
-    if (currentIndex < testimonials.length - cardsPerPage) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
+  const maxIndex = Math.max(0, testimonials.length - perPage);
+
+  const prev = () => setIndex((i) => Math.max(0, i - 1));
+  const next = () => setIndex((i) => Math.min(maxIndex, i + 1));
 
   return (
     <div className="flex flex-col items-center bg-gray-100 px-4 py-10">
@@ -64,22 +69,26 @@ export default function Testimonials() {
       <div className="relative w-full max-w-6xl overflow-hidden">
         {/* Left arrow */}
         <button
-          onClick={prevSlide}
-          disabled={currentIndex === 0}
+          onClick={prev}
+          disabled={index === 0}
           className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow hover:bg-gray-50 disabled:opacity-40"
+          aria-label="Previous"
         >
           ←
         </button>
 
-        {/* Slider container */}
+        {/* Slider track */}
         <div
           className="flex transition-transform duration-500"
-          style={{
-            transform: `translateX(-${currentIndex * (100 / cardsPerPage)}%)`,
-          }}
+          style={{ transform: `translateX(-${(index * 100) / perPage}%)` }}
         >
-          {testimonials.map((t, index) => (
-            <div key={index} className="w-1/3 flex-shrink-0 px-2">
+          {testimonials.map((t, i) => (
+            <div
+              key={i}
+              className="flex-shrink-0 px-2"
+              // Each slide takes 100/perPage% width responsively
+              style={{ width: `${100 / perPage}%` }}
+            >
               <TestimonialCard {...t} />
             </div>
           ))}
@@ -87,9 +96,10 @@ export default function Testimonials() {
 
         {/* Right arrow */}
         <button
-          onClick={nextSlide}
-          disabled={currentIndex >= testimonials.length - cardsPerPage}
+          onClick={next}
+          disabled={index === maxIndex}
           className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow hover:bg-gray-50 disabled:opacity-40"
+          aria-label="Next"
         >
           →
         </button>
