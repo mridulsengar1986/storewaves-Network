@@ -3,9 +3,18 @@ import React from 'react';
 
 export default function Hero() {
   return (
-    <main className="flex-grow bg-gray-50 py-12">
+    <main className="relative bg-gray-50 pb-12 pt-4">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
+          <div
+            className="pointer-events-none absolute inset-0 opacity-30"
+            aria-hidden="true"
+            style={{
+              backgroundImage: "url('/waves.gif')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          />
           {/* Left column */}
           <div className="text-left">
             <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl lg:text-6xl">
