@@ -1,4 +1,3 @@
-// src/components/TrendingToolsAndApps.jsx
 import React, { useState } from 'react';
 import { filters } from '../data/filters.js';
 import { products } from '../data/products.js';
@@ -57,7 +56,7 @@ export default function TrendingToolsAndApps() {
 
           {/* RIGHT: products for the selected filter */}
           <main className="lg:col-span-9">
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 2xl:grid-cols-3">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {visibleProducts.length ? (
                 visibleProducts.map((p) => (
                   <ProductCard key={p.id} product={p} />

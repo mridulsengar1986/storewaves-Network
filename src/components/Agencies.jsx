@@ -11,7 +11,7 @@ export default function Agencies() {
         blurb:
           'US-based tech studio building high-perf storefronts and brand sites.',
         location: 'United States',
-        logo: 'https://images.unsplash.com/photo-1611262588024-d12430b98920?q=80&w=600&auto=format&fit=crop', // placeholder illustration
+        logo: '/A1.avif',
         href: '#',
       },
       {
@@ -22,7 +22,7 @@ export default function Agencies() {
         blurb:
           'Design & build digital flagship stores with a focus on conversion.',
         location: 'Europe',
-        logo: 'https://dummyimage.com/600x400/ffffff/000000&text=GREBBAN',
+        logo: '/A2.avif',
         href: '#',
       },
       {
@@ -33,7 +33,7 @@ export default function Agencies() {
         blurb:
           'Recruiting specialists for e‑commerce, growth, and engineering teams.',
         location: 'Remote',
-        logo: 'https://images.unsplash.com/photo-1606208959242-3f3c9b5d6be5?q=80&w=600&auto=format&fit=crop',
+        logo: '/A3.avif',
         href: '#',
       },
       {
@@ -44,7 +44,7 @@ export default function Agencies() {
         blurb:
           'Performance marketing for D2C brands across paid social & search.',
         location: 'Global',
-        logo: 'https://dummyimage.com/600x400/ffffff/000000&text=KLAY+MEDIA',
+        logo: '/A4.avif',
         href: '#',
       },
       {
@@ -55,7 +55,7 @@ export default function Agencies() {
         blurb:
           'Lifecycle automations that drive LTV without spamming your users.',
         location: 'Canada',
-        logo: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=600&auto=format&fit=crop',
+        logo: '/A5.avif',
         href: '#',
       },
       {
@@ -66,7 +66,7 @@ export default function Agencies() {
         blurb:
           'Full‑funnel strategy from awareness to retention for scaling brands.',
         location: 'United Kingdom',
-        logo: 'https://images.unsplash.com/photo-1517816428104-797678c7cf0d?q=80&w=600&auto=format&fit=crop',
+        logo: '/A3.avif',
         href: '#',
       },
       {
@@ -76,7 +76,7 @@ export default function Agencies() {
         tag: 'Branding',
         blurb: 'Timeless identities, tone of voice, and brand systems for D2C.',
         location: 'United States',
-        logo: 'https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=600&auto=format&fit=crop',
+        logo: '/A7.avif',
         href: '#',
       },
       {
@@ -87,7 +87,7 @@ export default function Agencies() {
         blurb:
           'Granular search structure and landing page CRO for profitable CAC.',
         location: 'Australia',
-        logo: 'https://images.unsplash.com/photo-1550525811-e5869dd03032?q=80&w=600&auto=format&fit=crop',
+        logo: '/A8.avif',
         href: '#',
       },
       {
@@ -97,7 +97,7 @@ export default function Agencies() {
         tag: 'Paid Social',
         blurb: 'Creative testing engine for Meta, TikTok, and YouTube Shorts.',
         location: 'India',
-        logo: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=600&auto=format&fit=crop',
+        logo: '/A9.avif',
         href: '#',
       },
     ],
@@ -126,7 +126,7 @@ export default function Agencies() {
     });
 
   return (
-    <main className="min-h-screen w-full bg-gradient-to-br from-amber-50 via-white to-emerald-50 text-slate-800">
+    <main className="min-h-screen w-full bg-gradient-to-br from-gray-50 via-white to-emerald-50 text-slate-800">
       {/* Subtle pattern overlay */}
       <div
         aria-hidden
