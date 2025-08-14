@@ -31,6 +31,18 @@ export default function Header() {
               href="#"
               className="text-white transition-colors hover:text-teal-200"
             >
+              Tools
+            </a>
+            <a
+              href="#"
+              className="text-white transition-colors hover:text-teal-200"
+            >
+              Agencies
+            </a>
+            <a
+              href="#"
+              className="text-white transition-colors hover:text-teal-200"
+            >
               Login
             </a>
             <a

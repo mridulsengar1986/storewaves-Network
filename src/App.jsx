@@ -5,6 +5,9 @@ import Hero from './components/Hero.jsx';
 import ToolsoftheMonth from './components/ToolsoftheMonth.jsx';
 import TrendingBrands from './components/TrendingBrands.jsx';
 import Testimonials from './components/Testimonials.jsx';
+import TrendingToolsAndApps from './components/Trendingtoolsandapps.jsx';
+import Newsletter from './components/Newsletter.jsx';
+import Agencies from './components/Agencies.jsx';
 export default function App() {
   return (
     <>
@@ -12,6 +15,9 @@ export default function App() {
       <Hero />
       <ToolsoftheMonth />
       <TrendingBrands />
+      <TrendingToolsAndApps />
+      <Agencies />
+      <Newsletter />
       <Testimonials />
       <Footer />
     </>

@@ -1,15 +1,25 @@
 import React from 'react';
 import checkmateLogo from '../assets/checkmate.png';
-
+import { motion } from 'framer-motion';
 export default function ToolsOfTheMonth() {
   return (
     <>
-      <section className="bg-gradient-to-br from-teal-100 to-green-800 px-4 py-12 font-[Inter] md:px-12">
+      <section className="400 bg-gradient-to-br from-teal-100 to-blue-100 px-4 py-12 font-[Inter] md:px-12">
         {/* Header */}
         <div className="mx-auto mb-10 grid max-w-7xl items-center gap-6 md:grid-cols-2">
-          <h1 className="text-3xl font-extrabold text-gray-500 sm:text-5xl lg:text-6xl">
+          <motion.h1
+            initial={{ scale: 0.98 }}
+            animate={{ scale: [1, 1.12, 1], rotate: [-1, 0.4, 0] }}
+            transition={{
+              duration: 1.1,
+              repeat: Infinity,
+              repeatDelay: 1.2,
+              ease: 'easeInOut',
+            }}
+            className="bg-gradient-to-r from-teal-600 via-emerald-500 to-teal-600 bg-clip-text text-3xl font-extrabold tracking-tight text-transparent drop-shadow sm:text-5xl lg:text-6xl"
+          >
             Tool Of The Month
-          </h1>
+          </motion.h1>
           <p className="text-white-600 mt-4 py-4 text-lg">
             Each month we select one tool to feature as our Tool of the Month.
             The tool is usually widely adopted by brands on our platform or is
