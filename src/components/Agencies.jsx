@@ -126,8 +126,7 @@ export default function Agencies() {
     });
 
   return (
-    <main className="relative min-h-[60vh] bg-[url('/bg1.png')] bg-cover bg-center bg-no-repeat">
-      {/* //"min-h-screen w-full bg-gradient-to-br from-gray-50 via-white to-emerald-50 text-slate-800" */}
+    <main className="via-gray from-gray-150 min-h-screen w-full bg-gradient-to-br to-gray-200 text-slate-800">
       {/* Subtle pattern overlay */}
       <div
         aria-hidden
