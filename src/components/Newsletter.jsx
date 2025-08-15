@@ -27,7 +27,7 @@ export default function Newsletter() {
               Newsletter
             </span>
 
-            <h1 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl">
+            <h1 className="mt-4 text-4xl leading-tight font-extrabold tracking-tight sm:text-5xl md:text-6xl">
               <span className="block">Sign Up Today,</span>
               <span className="block">Learn Forever</span>
             </h1>

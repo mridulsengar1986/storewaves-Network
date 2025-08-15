@@ -126,7 +126,8 @@ export default function Agencies() {
     });
 
   return (
-    <main className="min-h-screen w-full bg-gradient-to-br from-gray-50 via-white to-emerald-50 text-slate-800">
+    <main className="relative min-h-[60vh] bg-[url('/bg1.png')] bg-cover bg-center bg-no-repeat">
+      {/* //"min-h-screen w-full bg-gradient-to-br from-gray-50 via-white to-emerald-50 text-slate-800" */}
       {/* Subtle pattern overlay */}
       <div
         aria-hidden
@@ -142,7 +143,7 @@ export default function Agencies() {
           <p className="text-sm font-medium tracking-wide text-emerald-700/80">
             Curated
           </p>
-          <h1 className="mt-1 text-balance font-serif text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+          <h1 className="mt-1 text-4xl leading-tight font-semibold tracking-tight text-balance sm:text-5xl">
             Trending Agencies
           </h1>
           <p className="mt-3 max-w-2xl text-pretty text-slate-600">
@@ -161,7 +162,7 @@ export default function Agencies() {
                 placeholder="Search agencies…"
                 className="w-full rounded-xl border border-slate-200 bg-white/80 px-4 py-2.5 text-[15px] shadow-sm outline-none placeholder:text-slate-400 focus:border-emerald-300 focus:ring-4 focus:ring-emerald-100"
               />
-              <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">
+              <span className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-slate-400">
                 ⌘K
               </span>
             </div>
@@ -229,7 +230,7 @@ function AgencyCard({ agency }) {
         )}
 
         {/* Tag */}
-        <div className="absolute left-3 top-3">
+        <div className="absolute top-3 left-3">
           <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-slate-700 ring-1 ring-black/5">
             {agency.tag}
           </span>
@@ -252,7 +253,7 @@ function AgencyCard({ agency }) {
           </span>
           <a
             href={agency.href}
-            className="rounded-md px-3 py-1.5 text-[13px] font-semibold text-emerald-700 ring-1 ring-emerald-200 hover:bg-emerald-50 focus:outline-none focus:ring-4 focus:ring-emerald-100"
+            className="rounded-md px-3 py-1.5 text-[13px] font-semibold text-emerald-700 ring-1 ring-emerald-200 hover:bg-emerald-50 focus:ring-4 focus:ring-emerald-100 focus:outline-none"
           >
             View profile
           </a>
